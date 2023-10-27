@@ -1,0 +1,178 @@
+Задание 1:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,b;
+
+	for (a >= 10; a <= 20; a++)
+	{
+	b = a*a;
+	cout << "Квадрат числа" << a << "=" << b << endl;
+
+	}
+
+	return 0;
+}
+
+Задание 2:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,b;
+
+	for (a > 35; a < 87; a++)
+	{
+		if (a%7==1 || a%7==2 || a%7==5 )
+		{
+			cout << a << endl;
+		}
+	}
+
+	return 0;
+}
+
+Задание 3:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,n, su;
+	cout << "Введите число n" << endl;
+	cin >> n;
+
+	for (a=a; a <= n; a++)
+	{
+		su += a;
+	}
+
+	cout << "Сумма чисел:" << su << endl;
+
+	return 0;
+}
+
+Задание 4:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,b,c,d,pr;
+	cout << "Введите трехзначное число" << endl;
+	cin >> a;
+	if (a > 99 && a < 1000)
+	{
+		b = a/100;
+		c = (a/10)%10;
+		d = a%10;
+		pr = b*c*d;
+
+	}
+	else
+	{
+		cout << "Перечитайте задание" << endl;
+	}
+
+	cout << "Произведение чисел:" << pr << endl;
+
+	return 0;
+}
+
+Задание 5:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,b,c;
+	cout << "Введите натуральное число:" << endl;
+	cin >> a;
+
+	if (a<=0)
+	{
+		cout << "Перечитайте условие" << endl;
+		return 0;
+	}
+	else
+	{
+		while (a>0)
+		{
+			b = a%10;
+			if (b%2==0)
+			{
+				c++;
+			}
+		a = a/10;
+		}
+		cout << "Количество четных чисел:" << c << endl;
+	}
+	return 0;
+}
+
+Задание 6:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,b;
+	int c = 0;
+	cout << "Введите натуральное число:" << endl;
+	cin >> a;
+
+	if (a<=0)
+	{
+		cout << "Перечитайте условие" << endl;
+		return 0;
+	}
+	else
+	{
+		while (a>0)
+		{
+			b = a%10;
+			if (b > c)
+			{
+				c = b;
+			}
+		a = a/10;
+		}
+		cout << "Наибольшая цифра:" << c << endl;
+	}
+	return 0;
+}
+
+Задание 7:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a,f;
+	int c=0;
+	for (a=1000;a<10000;a++)
+	{
+		int b=0;
+		f = a;
+		while (f>0)
+		{
+			b += f%10;
+			f = f/10;
+		}
+		if (b==15)
+		{
+			cout << "Числа, где сумма цифр равна 15:" << a << endl;
+		}
+	}
+	return 0;
+}
