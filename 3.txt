@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    vector<int> r(N);
+    vector<long long> su(N + 1, 0);
+
+    for (int i = 0; i < N; ++i) {
+        cin >> r[i];
+        su[i + 1] = su[i] + r[i];
+    }
+
+    int Q;
+    cin >> Q;
+
+    for (int q = 0; q < Q; ++q) {
+        int i, j;
+        cin >> i >> j;
+
+        cout << su[j] - su[i - 1] << endl;
+    }
+
+    return 0;
+}
