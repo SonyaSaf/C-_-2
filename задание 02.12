@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+double* cA(int size);
+void fA(double* data, int size);
+void dA(double* data, int size);
+void A(double* data);
+
+int main() {
+    char choice;
+
+    do {
+        
+        int size;
+        cout << "Введите размер массива: ";
+        cin >> size;
+        double* data = cA(size);
+        fA(data, size);
+        dA(data, size);
+        A(data);
+        cout << "Вы хотите создать еще один массив? Выбор(y,n)";
+        cin >> choice;
+
+    } while (choice == 'y' || choice == 'Y');
+
+    return 0;
+}
+
+
+double* cA(int size) {
+    return new double[size];
+}
+
+void fA(double* data, int size) {
+    cout << "Введите " << size << " Значения типа double:" << endl;
+    for (int i = 0; i < size; ++i) {
+        cin >> data[i];
+    }
+}
+
+void dA(double* data, int size) {
+    cout << "Элементы массива:" << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << data[i] << " ";
+    }
+    cout << "\n";
+}
+
+void A(double* data) {
+    delete[] data;
+}
+}
